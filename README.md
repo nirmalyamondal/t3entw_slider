@@ -41,7 +41,7 @@ Download and install the [extension][3] with the extension manager module.
 
 **Why?** The Simple responsive Bootstrap slider extension is a slider extension to grow the TYPO3 community.
 
-**How?**  There are multiple ways to support the further development. By outsourcing some additional tasks to https://TYPO3Entwentwicklung.com
+**How?**  There are multiple ways to support the further development. By outsourcing some additional tasks to https://TYPO3Entwicklung.com
 
 ## 4 Administration corner
 
