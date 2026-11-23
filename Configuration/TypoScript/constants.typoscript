@@ -1,0 +1,29 @@
+
+plugin.tx_t3entwslider_pi1 {
+    view {
+        # cat=plugin.tx_t3entwslider_pi1/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:t3entw_slider/Resources/Private/Templates/
+        # cat=plugin.tx_t3entwslider_pi1/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:t3entw_slider/Resources/Private/Partials/
+        # cat=plugin.tx_t3entwslider_pi1/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:t3entw_slider/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_t3entwslider_pi1//a; type=string; label=Default storage PID
+        storagePid =
+    }
+    settings {
+        javascript {
+            addJQuery = 1
+            jQueryFilePath = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js
+            addBootstrapBundle = 1
+            bootstrapBundleFilePath = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+        }
+        css {
+            addBootstrapCss = 1
+            bootstrapCssFilePath = https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+			addSliderCss = 1
+            sliderCssFilePath = EXT:t3entw_slider/Resources/Public/css/t3entw_slider.css
+        }
+    }
+}

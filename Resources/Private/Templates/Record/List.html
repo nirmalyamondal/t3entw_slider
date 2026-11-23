@@ -1,0 +1,74 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+<f:section name="content">
+  <div id="t3entw-slider-carousel{uid}" class="t3entw-slider carousel slide {carousel-fade}" data-bs-ride="{autoplay}">
+
+    <!-- The slideshow/carousel -->
+    <div class="t3entw-slider__wrp swiper-wrapper carousel-inner">    
+      <f:for each="{records}" as="record" iteration="iterator">
+        <f:render partial="Record/{theme}" arguments="{record:record, iterator:iterator, imageWidthDesktop:imageWidthDesktop, imageWidthTablet:imageWidthTablet, imageWidthMobile:imageWidthMobile, imageHeightDesktop:imageHeightDesktop, imageHeightTablet:imageHeightTablet, imageHeightMobile:imageHeightMobile, interval:interval, indicators:indicators, crossfade:crossfade, autoplay:autoplay}" />
+      </f:for>
+    </div>
+    <!-- Left and right controls/icons -->
+    <button class="bg-danger align-self-center rounded-circle carousel-control-prev" type="button" data-bs-target="#t3entw-slider-carousel{uid}" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="bg-danger align-self-center rounded-circle carousel-control-next" type="button" data-bs-target="#t3entw-slider-carousel{uid}" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+      <f:if condition="{indicators} == 1">
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <f:for each="{records}" as="recordI" iteration="iteratorI">
+          <f:if condition="{iteratorI.isFirst}">
+            <f:then>
+              <button type="button" data-bs-target="#t3entw-slider-carousel{uid}" data-bs-slide-to="{iteratorI.index}" class="bg-danger active" aria-current="true" aria-label="{recordI.title}"></button>
+            </f:then>
+            <f:else>
+              <button type="button" data-bs-target="#t3entw-slider-carousel{uid}" data-bs-slide-to="{iteratorI.index}" class="bg-danger" aria-label="{recordI.title}"></button>
+            </f:else>
+          </f:if>
+        </f:for>
+      </div>
+    </f:if>
+
+  </div>
+<f:asset.css identifier="heme-styles{uid}" href="EXT:t3entw_slider/Resources/Public/css/t3entw_slider_{theme}.css" />
+<f:asset.css identifier="inline-styles{uid}" additionalAttributes="{media: 'all'}">
+/* Only Mobile Devices */
+@media screen and (max-width: 767px) {
+  #t3entw-slider-carousel{uid} {
+    width: 100%;       /* Tries to take up full available width */
+    height: {imageHeightMobile}px;     /* Tries to be {imageHeightMobile}px tall */      
+    max-width: {imageWidthMobile}px;  /* Will never grow wider than {imageWidthMobile}px */
+    max-height: 80vh;  /* Will never grow taller than 80% of the viewport height */
+  }
+}
+
+/* Only Tablet Devices */
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+  #t3entw-slider-carousel{uid} {
+    width: 100%;       /* Tries to take up full available width */
+    height: {imageHeightTablet}px;     /* Tries to be {imageHeightTablet}px tall */      
+    max-width: {imageWidthTablet}px;  /* Will never grow wider than {imageWidthTablet}px */
+    max-height: 80vh;  /* Will never grow taller than 80% of the viewport height */
+  }
+}
+
+/* Only Desktop Devices */
+@media screen and (min-width: 1025px) {
+  #t3entw-slider-carousel{uid} {
+    width: 100%;       /* Tries to take up full available width */
+    height: {imageHeightDesktop}px;     /* Tries to be {imageHeightDesktop}px tall */      
+    max-width: {imageWidthDesktop}px;  /* Will never grow wider than {imageWidthDesktop}px */
+    max-height: 80vh;  /* Will never grow taller than 80% of the viewport height */
+  }
+}
+</f:asset.css>
+</f:section>
+
+</html>

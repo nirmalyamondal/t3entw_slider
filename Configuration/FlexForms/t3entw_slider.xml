@@ -1,0 +1,161 @@
+<T3DataStructure>
+    <sheets>
+
+        <!-- First Tab -->
+        <aDEF>
+            <ROOT>
+                <sheetTitle>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.additional_settings</sheetTitle>
+                <type>array</type>
+                <el>
+                    <settings.theme>
+                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.theme</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="1">
+                                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.text_over</label>
+                                        <value>TextOver</value>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.text_right</label>
+                                        <value>TextRight</value>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.text_bottom</label>
+                                        <value>TextBottom</value>
+                                    </numIndex>
+                                </items>
+                            </config>
+                    </settings.theme>
+                    <settings.interval>
+                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.interval</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="5000">
+                                        <label>5000</label>
+                                        <value>5000</value>
+                                    </numIndex>
+                                    <numIndex index="10000">
+                                        <label>10000</label>
+                                        <value>10000</value>
+                                    </numIndex>
+                                    <numIndex index="15000">
+                                        <label>15000</label>
+                                        <value>15000</value>
+                                    </numIndex>
+                                </items>
+                            </config>
+                    </settings.interval>                    
+                    <settings.indicators>
+                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.indicators</label>
+                        <config>
+                            <type>check</type>                          
+                        </config>
+                    </settings.indicators>
+                    <settings.crossfade>
+                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.crossfade</label>
+                        <config>
+                            <type>check</type>                            
+                        </config>
+                    </settings.crossfade>
+                    <settings.autoplay>
+                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.autoplay</label>
+                        <config>
+                            <type>check</type>                       
+                        </config>
+                    </settings.autoplay>
+                </el>
+            </ROOT>
+        </aDEF>
+
+        <!-- Second Tab -->
+        <wDEF>
+            <ROOT>
+                <sheetTitle>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.width_settings</sheetTitle>
+                <type>array</type>
+                <el>
+                    <settings.imageWidthDesktop>
+                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.image_width_desktop</label>
+                        <config>
+                            <type>number</type>
+                            <default>1200</default>
+                            <range>
+                                <lower>300</lower>
+                                <upper>2048</upper>
+                            </range>
+                        </config>
+                    </settings.imageWidthDesktop>
+                    <settings.imageWidthTablet>
+                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.image_width_tablet</label>
+                        <config>
+                            <type>number</type>
+                            <default>800</default>
+                            <range>
+                                <lower>200</lower>
+                                <upper>800</upper>
+                            </range>
+                        </config>
+                    </settings.imageWidthTablet>
+                    <settings.imageWidthMobile>
+                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.image_width_mobile</label>
+                        <config>
+                            <type>number</type>
+                            <default>600</default>
+                            <range>
+                                <lower>100</lower>
+                                <upper>600</upper>
+                            </range>
+                        </config>
+                    </settings.imageWidthMobile>  
+                </el>
+            </ROOT>
+        </wDEF>
+        
+        <!-- Third Tab -->
+        <hDEF>
+            <ROOT>
+                <sheetTitle>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.height_settings</sheetTitle>
+                <type>array</type>
+                <el>
+                    <settings.imageHeightDesktop>
+                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.image_height_desktop</label>
+                        <config>
+                            <type>number</type>
+                            <default>800</default>
+                            <range>
+                                <lower>300</lower>
+                                <upper>1200</upper>
+                            </range>
+                        </config>
+                    </settings.imageHeightDesktop>
+                    <settings.imageHeightTablet>
+                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.image_height_tablet</label>
+                        <config>
+                            <type>number</type>
+                            <default>600</default>
+                            <range>
+                                <lower>200</lower>
+                                <upper>800</upper>
+                            </range>
+                        </config>
+                    </settings.imageHeightTablet>
+                    <settings.imageHeightMobile>
+                        <label>LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:flexform.image_height_mobile</label>
+                        <config>
+                            <type>number</type>
+                            <default>400</default>
+                            <range>
+                                <lower>100</lower>
+                                <upper>600</upper>
+                            </range>
+                        </config>
+                    </settings.imageHeightMobile>                                     
+                </el>
+            </ROOT>
+        </hDEF>        
+
+    </sheets>
+</T3DataStructure>

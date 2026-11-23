@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  TYPO3Entwicklung\T3entwSlider\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Domain/Model/*'
+
+  TYPO3Entwicklung\T3entwSlider\RecordController:
+    # autowire: false will be inherited from _defaults
+    public: true    

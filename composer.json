@@ -1,0 +1,38 @@
+{
+    "name": "t3entw/slider",
+    "type": "typo3-cms-extension",
+    "description": "Responsive Bootstrap slider with Title, Link, Subtitle, Description, Image.",
+    "version": "14.0.0",
+    "keywords": [
+        "slider","typo3","t3entw","typo3entwicklung"
+    ],
+    "homepage": "https://typo3Entwicklung.com",
+    "authors": [
+        {
+            "name": "Nirmalya Mondal",
+            "email": "nirmalya.mondal@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "prefer-stable": false,
+    "minimum-stability": "stable",
+    "require": {
+        "typo3/cms-core": ">=14.0, <15.0"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "t3entw_slider"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "TYPO3Entwicklung\\T3entwSlider\\": "Classes"
+        }
+    },
+    "replace": {
+        "typo3-ter/t3entw-slider": "self.version"
+    }
+}

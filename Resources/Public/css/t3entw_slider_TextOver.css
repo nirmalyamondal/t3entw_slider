@@ -1,0 +1,15 @@
+.t3entw-slider__img .img-fluid {
+  object-fit: cover; /* Crops the image to fill the space without stretching */
+  object-position: center; /* Centers the image crop area */
+}
+h5.t3entw-slider__title, 
+p.t3entw-slider__code,
+div.t3entw-slider__text { color: #000;}
+.t3entw-slider__morelink {  }
+
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-height: 500px) and (min-width: 992px) {
+}

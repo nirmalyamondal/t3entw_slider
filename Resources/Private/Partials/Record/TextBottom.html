@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+        <div class="t3entw-slider__item carousel-item {f:if(condition: iterator.isFirst, then: 'active', else: '')}" data-bs-interval="{interval}">
+            <div class="t3entw-slider__img">  
+                <f:alias map="{singleImage: record.image.0}">       
+                    <f:if condition="{singleImage.originalResource.publicUrl}">
+                        <f:then> 
+                            <picture>
+                                <!-- Mobile Crop Variant -->
+                                <source media="(max-width: 767px)" 
+                                        srcset="{f:uri.image(image: singleImage, cropVariant: 'mobile',  width: imageWidthMobile, maxWidth : imageWidthMobile, maxHeight: imageHeightMobile, height: imageHeightMobile)}" class="img-fluid d-block t3entw-image-slider" />                                        
+                                <!-- Tablet Crop Variant -->
+                                <source media="(max-width: 1024px)" 
+                                        srcset="{f:uri.image(image: singleImage, cropVariant: 'tablet',  width: imageWidthTablet, maxWidth: imageWidthTablet, maxHeight: imageHeightTablet, height: imageHeightTablet)}" class="img-fluid d-block t3entw-image-slider" />                                        
+                                <!-- Default Desktop Image -->
+                                <img src="{f:uri.image(image: singleImage, cropVariant: 'default', width: imageWidthDesktop, maxWidth: imageWidthDesktop, maxHeight: imageHeightDesktop, height: imageHeightDesktop)}" alt="{singleImage.alternative}" loading="lazy" class="img-fluid d-block t3entw-image-slider" />
+                            </picture>
+                        </f:then>
+                        <f:else>
+                            <picture>
+                                <f:image src="EXT:t3entw_slider/Resources/Public/Icons/NonExistingImage.png" width='{imageWidthDesktop}' maxWidth='{imageWidthDesktop}' maxHeight='{imageHeightDesktop}' height='{imageHeightDesktop}' loading="lazy" class="img-fluid d-block t3entw-image-slider" alt="{record.title}" />
+                            </picture>
+                        </f:else>
+                    </f:if>   
+                </f:alias>               
+                <div class="carousel-caption carousel-caption-bottom bg-white opacity-75">
+                    <div class="t3entw-slider__content">                        
+                        <h5 class="t3entw-slider__title">{record.title} TextBottom</h5>
+                        <p class="t3entw-slider__code"><b>{record.subtitle}</b></p>
+                        <div class="t3entw-slider__text"><f:format.html parseFuncTSPath="lib.parseFunc">{record.description}</f:format.html></div> 
+                        <f:if condition="{record.uri}">
+                            <div class="bg-danger t3entw-slider__morelink px-3 pt-1 pb-1">
+                                <f:link.typolink parameter="{record.uri}" class="text-decoration-none text-white link-info t3entw-slider__button">
+                                    {f:translate(key: 'LLL:EXT:t3entw_slider/Resources/Private/Language/locallang.xlf:label_more')} ...
+                                </f:link.typolink>
+                            </div>
+                        </f:if>
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+</html>

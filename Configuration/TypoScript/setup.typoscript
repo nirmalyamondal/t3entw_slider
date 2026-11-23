@@ -1,0 +1,51 @@
+
+plugin.tx_t3entwslider_pi1 {
+    view {
+        templateRootPaths.0 = EXT:t3entw_slider/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_t3entwslider_pi1.view.templateRootPath}
+        partialRootPaths.0 = EXT:t3entw_slider/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_t3entwslider_pi1.view.partialRootPath}
+        layoutRootPaths.0 = EXT:t3entw_slider/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_t3entwslider_pi1.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_t3entwslider_pi1.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        # Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+# Add additional JS files if it was turned on in the constants
+[{$plugin.tx_t3entwslider_pi1.settings.javascript.addJQuery} == 1]
+page.includeJSFooterlibs.t3entwSliderjQuery = {$plugin.tx_t3entwslider_pi1.settings.javascript.jQueryFilePath}
+page.includeJSFooterlibs.t3entwSliderjQuery.external = 1
+[end]
+
+[{$plugin.tx_t3entwslider_pi1.settings.javascript.addBootstrapBundle} == 1]
+page.includeJSFooterlibs.t3entwBootstrapBundle = {$plugin.tx_t3entwslider_pi1.settings.javascript.bootstrapBundleFilePath}
+page.includeJSFooterlibs.t3entwBootstrapBundle.external = 1
+[end]
+
+# Add required css by turning on in the constants
+[{$plugin.tx_t3entwslider_pi1.settings.css.addBootstrapCss} == 1]
+page.includeCSS {
+  file95 = {$plugin.tx_t3entwslider_pi1.settings.css.bootstrapCssFilePath}
+  file95.external = 1
+}
+[end]
+
+# Add required css by turning on in the constants
+[{$plugin.tx_t3entwslider_pi1.settings.css.addSliderCss} == 1]
+page.includeCSS {
+  file96 = {$plugin.tx_t3entwslider_pi1.settings.css.sliderCssFilePath}
+}
+[end]

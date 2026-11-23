@@ -1,0 +1,34 @@
+.t3entw-slider__img .img-fluid {
+  object-fit: cover; /* Crops the image to fill the space without stretching */
+  object-position: center; /* Centers the image crop area */
+}
+.carousel-caption-right {
+  left:auto;
+  right:0;
+  top:0;
+  bottom:0;
+}
+h5.t3entw-slider__title, 
+p.t3entw-slider__code,
+div.t3entw-slider__text { color: #000;}
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-height: 500px) and (min-width: 992px) {
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+  .w-sm-100 { width: 100% !important; }
+}
+
+/* Medium screens and up (≥768px) */
+@media (min-width: 768px) {
+  .w-md-50 { width: 50% !important; }
+}
+
+/* Large screens and up (≥992px) */
+@media (min-width: 992px) {
+  .w-lg-25 { width: 25% !important; }
+}
